@@ -1,0 +1,23 @@
+class Ex7 {
+    public static void main(String[] args) {
+        int n = Integer.parseInt(args[0]);
+        boolean premier = true;
+
+        if (n <= 1) {
+            premier = false;
+        } else {
+            for (int i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    premier = false;
+                    break;
+                }
+            }
+        }
+
+        if (premier) {
+            System.out.println(n + " est un nombre premier");
+        } else {
+            System.out.println(n + " n'est pas un nombre premier");
+        }
+    }
+}
